@@ -11,7 +11,7 @@
         }
     },
     "require": {
-        "sproutcms/cms": "dev-feat/v4"
+        "sproutcms/cms": "^4"
     },
     "config": {
         "allow-plugins": {
