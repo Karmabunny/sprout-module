@@ -1,0 +1,21 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "sproutcms/module",
+    "description": "Template Sprout 4 Module",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "keywords": ["sprout", "cms", "content-management-system", "framework", "mysql"],
+    "autoload": {
+        "psr-4": {
+            "SproutModules\\Demo\\": "src/"
+        }
+    },
+    "require": {
+        "sproutcms/cms": "dev-feat/v4"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
