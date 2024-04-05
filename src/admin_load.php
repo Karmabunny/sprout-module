@@ -12,13 +12,16 @@
  */
 
 use Sprout\Helpers\Register;
+use SproutModules\Demo\Controllers\Admin\DemoItemAdminController;
+use SproutModules\Demo\Controllers\Admin\DemoItemCategoryAdminController;
+use SproutModules\Demo\Controllers\Admin\WordAdminController;
+use SproutModules\Demo\Controllers\Admin\WordCategoryAdminController;
 
-
-Register::adminControllers('Karmabunny\Demo', [
-    'demo_item' => 'Admin\DemoItemAdminController',
-    'demo_item_category' => 'Admin\DemoItemCategoryAdminController',
-    'word' => 'Admin\WordAdminController',
-    'word_category' => 'Admin\WordCategoryAdminController',
+Register::adminControllers([
+    'demo_item' => DemoItemAdminController::class,
+    'demo_item_category' => DemoItemCategoryAdminController::class,
+    'word' => WordAdminController::class,
+    'word_category' => WordCategoryAdminController::class,
 ]);
 
 Register::adminTile(
