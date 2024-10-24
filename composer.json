@@ -17,5 +17,18 @@
         "allow-plugins": {
             "php-http/discovery": true
         }
+    },
+    "extra": {
+        "locals": {
+            "karmabunny/kb": "../kbphp",
+            "karmabunny/pdb": "../kbpdb",
+            "karmabunny/rdb": "../kbrdb",
+            "karmabunny/router": "../kbrouter",
+            "sproutcms/cms": "../sprout3"
+        }
+    },
+    "scripts": {
+        "patch-locals": "@php tools/patch_locals.php",
+        "convert-ns": "@php tools/convert_ns.php"
     }
 }
