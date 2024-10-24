@@ -3,12 +3,17 @@
 namespace SproutModules\Demo;
 
 use Sprout\Helpers\Module;
-use Sprout\Helpers\ModuleSiteTrait;
+use Sprout\Helpers\Sprout;
 
 /**
  * Demo module.
  */
 class DemoModule extends Module
 {
-    use ModuleSiteTrait;
+
+    /** @inheritdoc */
+    public function getVersion(): string
+    {
+        return Sprout::getInstalledVersion('karmabunny/sprout-module');
+    }
 }
