@@ -2896,16 +2896,16 @@
         },
         {
             "name": "sproutcms/cms",
-            "version": "v4.3.41",
+            "version": "v4.3.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Karmabunny/sprout3.git",
-                "reference": "e8746b341326b0c1fef8a5ff9967b9ec07e5946f"
+                "reference": "c79e75263d2816b7d58901c728d42466adf7624b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Karmabunny/sprout3/zipball/e8746b341326b0c1fef8a5ff9967b9ec07e5946f",
-                "reference": "e8746b341326b0c1fef8a5ff9967b9ec07e5946f",
+                "url": "https://api.github.com/repos/Karmabunny/sprout3/zipball/c79e75263d2816b7d58901c728d42466adf7624b",
+                "reference": "c79e75263d2816b7d58901c728d42466adf7624b",
                 "shasum": ""
             },
             "require": {
@@ -2982,9 +2982,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Karmabunny/sprout3/issues",
-                "source": "https://github.com/Karmabunny/sprout3/tree/v4.3.41"
+                "source": "https://github.com/Karmabunny/sprout3/tree/v4.3.42"
             },
-            "time": "2025-11-21T06:46:57+00:00"
+            "time": "2025-11-25T03:12:52+00:00"
         },
         {
             "name": "symfony/browser-kit",
