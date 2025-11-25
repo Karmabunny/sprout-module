@@ -74,7 +74,7 @@ class WordAdminController extends HasCategoriesAdminController
      * Saves the provided POST data into a new record in the database
      *
      * @param int $item_id After saving, the new record id will be returned in this parameter
-     * @param bool True on success, false on failure
+     * @return bool True on success, false on failure
      */
     public function _addSave(&$item_id)
     {
