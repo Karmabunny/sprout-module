@@ -35,6 +35,7 @@
     "scripts": {
         "patch-locals": "@php tools/patch_locals.php",
         "convert-ns": "@php tools/convert_ns.php",
+        "analyse": "phpstan analyse -c phpstan.neon",
         "test": "phpunit --testdox --configuration phpunit.xml.dist"
     },
     "require-dev": {
