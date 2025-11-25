@@ -21,6 +21,7 @@ use Sprout\Helpers\Navigation;
 use Sprout\Helpers\Page;
 use Sprout\Helpers\TreenodeRedirectMatcher;
 use Sprout\Helpers\BaseView;
+use Sprout\Helpers\Cron;
 use Sprout\Helpers\PhpView;
 
 
@@ -77,4 +78,17 @@ class DemoController extends Controller implements FrontEndEntrance
         echo $skin->render();
     }
 
+
+    public function cronDemo()
+    {
+        Cron::start('Demo Cron');
+
+        for ($i = 0; $i < 10; $i++) {
+            Cron::message("Processing item {$i}");
+            usleep(150 * 1000);
+        }
+
+        Cron::message('Finished');
+        Cron::success();
+    }
 }
