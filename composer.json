@@ -34,7 +34,8 @@
     },
     "scripts": {
         "patch-locals": "@php tools/patch_locals.php",
-        "convert-ns": "@php tools/convert_ns.php"
+        "convert-ns": "@php tools/convert_ns.php",
+        "test": "phpunit --testdox --configuration phpunit.xml.dist"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1",
