@@ -11,7 +11,7 @@
         }
     },
     "require": {
-        "sproutcms/cms": "^4"
+        "sproutcms/cms": "4.4.*"
     },
     "config": {
         "optimize-autoloader": true,
@@ -25,6 +25,7 @@
     },
     "extra": {
         "locals": {
+            "karmabunny/interfaces": "../kbinterfaces",
             "karmabunny/kb": "../kbphp",
             "karmabunny/pdb": "../kbpdb",
             "karmabunny/rdb": "../kbrdb",
