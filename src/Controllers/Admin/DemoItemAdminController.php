@@ -23,7 +23,7 @@ use Sprout\Helpers\Json;
 use Sprout\Helpers\Pdb;
 use Sprout\Helpers\Url;
 use Sprout\Helpers\WorkerCtrl;
-
+use SproutModules\Demo\Helpers\DemoJob;
 
 /**
  * Handles admin processing for Demo items
@@ -62,6 +62,9 @@ class DemoItemAdminController extends HasCategoriesAdminController
 
         $url = "admin/call/{$this->controller_name}/runWorker";
         $tools['worker'] = '<li class="worker"><a href="' . Enc::html($url) . '">Run demo worker</a></li>';
+
+        $url = "admin/call/{$this->controller_name}/runJob";
+        $tools['job'] = '<li class="job"><a href="' . Enc::html($url) . '">Run demo job</a></li>';
 
         return $tools;
     }
@@ -177,6 +180,26 @@ class DemoItemAdminController extends HasCategoriesAdminController
     {
         $worker = WorkerCtrl::start('SproutModules\\Demo\\Helpers\\DemoWorker', 100, 500, 1000);
         Url::redirect($worker['log_url']);
+    }
+
+
+    public function runJob()
+    {
+        $job = new DemoJob();
+        $job->arg1 = 100;
+        $job->arg2 = 200;
+        $job->arg3 = 500;
+
+        WorkerCtrl::push($job);
+
+        $job = new DemoJob();
+        $job->arg1 = 10;
+        $job->arg2 = 15;
+        $job->arg3 = 20;
+
+        WorkerCtrl::push($job);
+
+        Url::redirect('admin/contents/worker_job');
     }
 }
 
